@@ -1,0 +1,50 @@
+/* General styles for all screens */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.menu-item p-3 border{
+    background-color: aqua;
+}
+.menu-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #cc6060;
+    border: 1px solid #ccc;
+}
+
+/* Desktop - screens 992px and up */
+@media (min-width: 992px) {
+    .menu-item {
+        flex-basis: 30%;
+    }
+}
+
+/* Tablet - screens between 768px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-item {
+        flex-basis: 45%;
+    }
+    .menu-item:nth-child(3) {
+        flex-basis: 100%;
+    }
+}
+
+/* Mobile - screens less than 768px */
+@media (max-width: 767px) {
+    .menu {
+        flex-direction: column;
+    }
+    .menu-item {
+        flex-basis: 100%;
+    }
+}
